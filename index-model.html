@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Vini Pessoa</title>
+<script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=cnDfDgkT3K_T7iMbOHpPYuUX84QOqZO-7y_OcEKFtiBR9E6P86Rd9qsUWZ-5P6etMnUSVbfRkt3EV7Fn1RErYq4x78V7aEFfchfTwvbFDrzlNiaAmXMsAAH6lvoW4jrCVEFODoPI7rhmikIrCqTBCg" charset="UTF-8"></script>
+</head>
+
+<body>
+  <div class="container">
+    <img class="profile" src="assets\profile.png" />
+
+<!--     <h2>Vinicius Pessoa</h2>
+    <p class="subtitle">Programador em desenvolvimento</p>
+    <p>Acompanhe meu trabalho ✌🏼</p> -->
+<!--     <h2 class="title" id="name"><input type="text" id="input-name" placeholder="Name"></h2> -->
+    <h2 class="title" id="name" contenteditable="true">name</h2>
+    <p  id="subtitle" contenteditable="true">Subtitle</p>
+    <p id="slogan" contenteditable="true">Slogan</p>
+
+    <div class="info-container">
+      <div class="social-media-container">
+        <a >
+          <i data-feather="github"></i>
+        </a>
+        <a ><i data-feather="linkedin"></i></a>
+        <a ><i data-feather="youtube"></i></a>
+        <a id="a-instagram" onclick="insertSM(this)" target="_blank"><i data-feather="instagram"></i></a>
+      </div>
+      <div id="form-user-sm" style="display: none;">
+        <label id="label-url-sm"></label><br>
+        <input type="text" id="input-sm" name="sm" >
+        <input type="submit" onclick="submeteSM()" value="Submit">
+      </div>
+
+      <div class="content">
+<!--         <div id="project-content" class="secondary-content">
+          <h3> 
+          <i id="project-go-back-button" data-feather="arrow-left"> </i>
+           Meus Projetos
+          </h3>
+           <a class="link" href="https://github.com/Vini9-9/VBAPlaylistSpotify">
+            🎶 Criação de Playlist no Spotify pelo Excel 
+          </a> 
+        </div> -->
+        <div class="main-content">
+          <p contenteditable="true">Último vídeo do youtube 👇🏼</p>
+          <div class="video-container">
+            <input type="text" id="input-video" placeholder="URL">
+            <iframe frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+           <a id="0-button" class="link highlight" contenteditable="true">
+            💻 Meus projetos
+          </a>
+          <button id="add-highlight" class="link highlight">+</button>
+          <button id="add-link" class="button link">+</button>
+         <!-- <button id="youtube-button" class="link" >
+            🎥 Meu canal do Youtube
+          </button> -->
+        </div>
+      </div>
+    </div>
+    <button onclick="submeter()">submit</button>
+  </div>
+</body>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+  feather.replace();
+  function submeter() {
+
+    const editables = ["name", "subtitle", "slogan"];
+
+    editables.forEach(editable => {
+      var valor = document.getElementById(editable).textContent
+      document.getElementById(editable).contentEditable = false;
+      console.log(`${editable}: ${valor}`);
+    });
+
+  }
+
+  function insertSM (params) {
+    
+    var nomeClasse = params.children[0].className;
+    var redeSocial = nomeClasse.baseVal.replace("feather feather-","");
+    document.getElementById("form-user-sm").style.display = "inline-block";
+    
+    switch (redeSocial) {
+      case "instagram":
+      console.log("ENTROU!");
+      document.getElementById("label-url-sm").textContent = "https://www.instagram.com/";
+      document.getElementById("input-sm").setAttribute("placeholder","User Instagram");
+        break;
+    
+    }
+
+  }
+
+  function submeteSM() {
+    document.getElementById("form-user-sm").style.display = "none";
+    var urlSM = document.getElementById("label-url-sm").textContent;
+    var user = document.getElementById("input-sm").value;
+    var url = urlSM + user;
+    console.log(user);
+
+    if (urlSM.includes("instagram")){
+      document.getElementById("a-instagram").setAttribute("href", url);
+    }
+
+  }
+</script>
+<script type="text/javascript" src="script.js"></script>
+
+</html>
