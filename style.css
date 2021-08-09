@@ -204,15 +204,17 @@ body {
   width: 70%;
 }
 
-.content:hover {
-  background-color: red;
-  opacity: .2;
-}
-
 .im.im-angle-down {
   position: absolute;
-  margin-top: 17%;
   color: black;
   font: normal normal normal 12px/1 'iconmonstr-iconic-font';
   z-index: 1;
+  margin-left: 8%;
+}
+.im.im-angle-up {
+  position: absolute;
+  color: black;
+  font: normal normal normal 12px/1 'iconmonstr-iconic-font';
+  z-index: 1;
+  margin-left: 8%;
 }

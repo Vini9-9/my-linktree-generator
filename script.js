@@ -12,18 +12,27 @@ function submeter() {
 
 function insertSM (params) {
   
-  var nomeClasse = params.children[0].className;
+/*   console.log(params.previousElementSibling.children[0].className); */
+  var nomeClasse = params.previousElementSibling.children[0].className;
   var redeSocial = nomeClasse.baseVal.replace("feather feather-","");
-  document.getElementById("form-user-sm").style.display = "inline-block";
-  
-  switch (redeSocial) {
-    case "instagram":
-    console.log("ENTROU!");
-    document.getElementById("label-url-sm").textContent = "https://www.instagram.com/";
-    document.getElementById("input-sm").setAttribute("placeholder","User Instagram");
-      break;
-  
+
+  if (params.className == "im im-angle-down") {
+    params.className = "im im-angle-up";
+    document.getElementById("form-user-sm").style.display = "inline-block";
+    
+    switch (redeSocial) {
+      case "instagram":
+      document.getElementById("label-url-sm").textContent = "https://www.instagram.com/";
+      document.getElementById("input-sm").setAttribute("placeholder","User Instagram");
+        break;
+    
+    }
+  } else {
+    params.className = "im im-angle-down";
+    document.getElementById("form-user-sm").style.display = "none";
   }
+  
+
 
 }
 
@@ -38,6 +47,7 @@ function submeteSM() {
     document.getElementById("a-instagram").setAttribute("href", url);
   }
 
+  document.getElementsByClassName("im im-angle-up")[0].className = "im im-angle-down";
 }
 
 /* let abas = []
