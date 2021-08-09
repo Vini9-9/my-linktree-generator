@@ -39,7 +39,7 @@ function insertSM (params) {
 function submeteSM() {
   document.getElementById("form-user-sm").style.display = "none";
   var urlSM = document.getElementById("label-url-sm").textContent;
-  var user = document.getElementById("input-sm").value;
+  var user = document.getElementById("input-sm").value.trim();
   var url = urlSM + user;
   console.log(user);
 
