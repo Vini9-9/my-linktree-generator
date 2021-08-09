@@ -71,6 +71,15 @@ body {
   z-index: 1;
 }
 
+a.SM-active {
+  background-color: #9d46c6 !important;
+}
+
+a.SM-active svg {
+  color: #fff;
+}
+
+
 .social-media-container a {
   background: #fff;
   border-radius: 50%;
@@ -218,3 +227,5 @@ body {
   z-index: 1;
   margin-left: 8%;
 }
+
+
