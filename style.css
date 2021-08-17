@@ -228,4 +228,14 @@ a.SM-active svg {
   margin-left: 8%;
 }
 
+.overlay {
+  left: 47%;
+  top: 48px;
+  position: absolute;
+  opacity: 0;
+  transition: .5s ease;
+} 
 
+.wrapper:hover .overlay{
+  opacity: 1;
+}

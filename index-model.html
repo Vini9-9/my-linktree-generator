@@ -8,20 +8,25 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" />
   <title>Vini Pessoa</title>
-<script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=cnDfDgkT3K_T7iMbOHpPYuUX84QOqZO-7y_OcEKFtiBR9E6P86Rd9qsUWZ-5P6etMnUSVbfRkt3EV7Fn1RErYq4x78V7aEFfchfTwvbFDrzlNiaAmXMsAAH6lvoW4jrCVEFODoPI7rhmikIrCqTBCg" charset="UTF-8"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=cnDfDgkT3K_T7iMbOHpPYuUX84QOqZO-7y_OcEKFtiBR9E6P86Rd9qsUWZ-5P6etMnUSVbfRkt3EV7Fn1RErYq4x78V7aEFfchfTwvbFDrzlNiaAmXMsAAH6lvoW4jrCVEFODoPI7rhmikIrCqTBCg" charset="UTF-8"></script>
 </head>
 
 <body>
   <div class="container">
-    <img class="profile" src="assets\profile.png" />
+    <label for="input-profile-image">
+      <div class="wrapper">
+        <img class="profile" id="img-profile" src="assets\profile.png" />
+        <div class="overlay">
+          <i class="im im-photo-camera" style="font-size: 42px;"></i>
+        </div>
+      </div>
+    </label>
+    <input type="file" name="" id="input-profile-image" style="/* display: none;visibility: none; */" >
 
-<!--     <h2>Vinicius Pessoa</h2>
-    <p class="subtitle">Programador em desenvolvimento</p>
-    <p>Acompanhe meu trabalho ✌🏼</p> -->
-<!--     <h2 class="title" id="name"><input type="text" id="input-name" placeholder="Name"></h2> -->
-    <h2 class="title" id="name" contenteditable="true">name</h2>
-    <p  id="subtitle" contenteditable="true">Subtitle</p>
-    <p id="slogan" contenteditable="true">Slogan</p>
+      <h2 class="title" id="name" contenteditable="true">name</h2>
+      <p  id="subtitle" contenteditable="true">Subtitle</p>
+      <p id="slogan" contenteditable="true">Slogan</p>
 
     <div class="info-container">
       <div class="social-media-container">
