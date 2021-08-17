@@ -229,7 +229,7 @@ a.SM-active svg {
 }
 
 .overlay {
-  left: 47%;
+  left: calc(50vw - 30px);
   top: 48px;
   position: absolute;
   opacity: 0;
@@ -237,5 +237,5 @@ a.SM-active svg {
 } 
 
 .wrapper:hover .overlay{
-  opacity: 1;
+  opacity: .7;
 }
