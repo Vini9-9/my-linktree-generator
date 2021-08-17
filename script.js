@@ -63,6 +63,21 @@ function submeteSM() {
   document.getElementsByClassName("SM-active")[0].classList.remove("SM-active");
 }
 
+/* getImage */
+  var input = document.querySelector("#input-profile-image");
+  input.addEventListener('change',preview);
+  function preview() {
+    var fileObject = this.files[0];
+    var fileReader = new FileReader();
+    fileReader.readAsDataURL(fileObject);
+    fileReader.onload = function () {
+      var result = fileReader.result;
+      var img = document.querySelector('#img-profile');
+      img.setAttribute('src',result);
+    }
+  }
+/* getImage */
+
 /* let abas = []
 
 abas.forEach(aba => {
