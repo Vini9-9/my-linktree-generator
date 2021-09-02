@@ -76,6 +76,19 @@ function submeteSM() {
       img.setAttribute('src',result);
     }
   }
+
+function limparInput(id) {
+  document.getElementById(id).value = "";
+}
+
+  function embedVideo() {
+    var x = document.getElementById("input-video");
+    url = x.value;
+    //https://www.youtube.com/watch?v=2km2XnGgtBI
+    //https://www.youtube.com/embed/2km2XnGgtBI 
+    newUrl = url.replace("watch?v=","embed/");
+    document.getElementById("iframe-video").setAttribute("src", newUrl);
+  }
 /* getImage */
 
 /* let abas = []

@@ -22,7 +22,7 @@
         </div>
       </div>
     </label>
-    <input type="file" name="" id="input-profile-image" style="/* display: none;visibility: none; */" >
+    <input type="file" name="" id="input-profile-image">
 
       <h2 class="title" id="name" contenteditable="true">name</h2>
       <p  id="subtitle" contenteditable="true">Subtitle</p>
@@ -73,9 +73,11 @@
         </div> -->
         <div class="main-content">
           <p contenteditable="true">Último vídeo do youtube 👇🏼</p>
+          <input type="text" id="input-video" placeholder="URL" style="width: 78%;">
+          <button onclick="limparInput('input-video')" style="width: 5%;">🗑</button>
+          <button onclick="embedVideo()" style="width: 15%;">Preview</button>
           <div class="video-container">
-            <input type="text" id="input-video" placeholder="URL">
-            <iframe frameborder="0"
+            <iframe id="iframe-video" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
           </div>
